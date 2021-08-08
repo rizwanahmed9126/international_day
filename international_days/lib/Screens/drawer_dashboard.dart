@@ -9,14 +9,14 @@ import 'package:international_todays/Screens/login_screen.dart';
 
 
 class DrawerMenu extends StatefulWidget {
-  const DrawerMenu({Key? key}) : super(key: key);
+  const DrawerMenu({Key key}) : super(key: key);
 
   @override
   _DrawerMenuState createState() => _DrawerMenuState();
 }
 
 class _DrawerMenuState extends State<DrawerMenu> {
-  Size? size;
+  Size size;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          height: size!.height,
-          width: size!.width,
+          height: size.height,
+          width: size.width,
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -144,7 +144,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
 }
 
 class CustomDrawer extends StatefulWidget {
-  const CustomDrawer({Key? key}) : super(key: key);
+  const CustomDrawer({Key key}) : super(key: key);
 
   @override
   _CustomDrawerState createState() => _CustomDrawerState();

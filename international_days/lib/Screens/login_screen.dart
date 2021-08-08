@@ -5,7 +5,7 @@ import 'package:international_todays/Screens/Home.dart';
 import 'package:international_todays/Screens/drawer_dashboard.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

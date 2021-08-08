@@ -16,7 +16,7 @@ AppBar appBarWidget(BuildContext context,ZoomDrawerController controller)
     leading: IconButton(
       icon: Icon(Icons.menu, color: Colors.black), // set your color here
       onPressed: () {
-        controller.open!();
+        controller.open();
       },
     ),
     actions: <Widget>[
