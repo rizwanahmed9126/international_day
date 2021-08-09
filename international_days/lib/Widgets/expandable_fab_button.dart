@@ -8,7 +8,7 @@ class ExpandableFabButton extends StatefulWidget {
   final Function onClick4;
   final Animation degOneTranslationAnimation;
   var distance;
-  var rotationValue;
+  Animation rotationValue;
 
   ExpandableFabButton({this.onClick1,this.onClick2,this.onClick3,this.onClick4,this.degOneTranslationAnimation,this.distance,this.rotationValue
   });
@@ -18,104 +18,145 @@ class ExpandableFabButton extends StatefulWidget {
 
 class _ExpandableFabButtonState extends State<ExpandableFabButton> with SingleTickerProviderStateMixin{
 
-  // AnimationController animationController;
-  // Animation degOneTranslationAnimation;
-
-
-  
-  
-
 
   double getRadianFromDegree(double degree){
     double unitRadian=57.295779513;
     return degree/unitRadian;
   }
-  
+
 
 
 
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
     return Stack(
       children: [
 
         Transform.translate(
-            offset: Offset.fromDirection(getRadianFromDegree(270),widget.distance),
+            offset: Offset.fromDirection(getRadianFromDegree(300),widget.distance
+            ),
             child:
             Transform(
-              transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue)),
+              transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue.value))..scale(widget.degOneTranslationAnimation.value),
+              alignment: Alignment.center,
               child: Container(
-                decoration: BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
-                width: 60,
-                height: 60,
-                child: IconButton(icon: Icon(Icons.menu),
-                    enableFeedback: true, onPressed: widget.onClick2),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xffBDBDBD),
+                        blurRadius: 2,
+                        spreadRadius: 1,
+                        offset: Offset(2, -3),
+                      )
+                    ]
+                ),
+                width: size.width*0.09,
+                height: size.width*0.09,
+                child: IconButton(
+                    icon: RotatedBox(
+                      quarterTurns: 6,
+                        child: Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                          size: 17,)
+                    ),
+                    enableFeedback: true,
+                    onPressed: widget.onClick2
+                ),
               ),
             )
-          // CircularButton(
-          //     height: 50,
-          //     width: 50,
-          //     icon: Icon(Icons.menu),
-          //     color: Colors.blue,
-          //     onPressed: widget.onClick4
-          // ),
+
         ),
         Transform.translate(
-            offset: Offset.fromDirection(getRadianFromDegree(225),widget.distance),
+            offset: Offset.fromDirection(getRadianFromDegree(195),widget.distance
+            ),
+
             child:
             Transform(
-              transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue)),
+              transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue.value))..scale(widget.degOneTranslationAnimation.value),
+              alignment: Alignment.center,
               child: Container(
-                decoration: BoxDecoration(color: Colors.yellow, shape: BoxShape.circle),
-                width: 60,
-                height: 60,
-                child: IconButton(icon: Icon(Icons.menu),
-                    enableFeedback: true, onPressed: widget.onClick2),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xffBDBDBD),
+                        blurRadius: 2,
+                        spreadRadius: 1,
+                        offset: Offset(2, 0.0),
+                      )
+                    ]
+                ),
+                width: size.width*0.09,
+                height: size.width*0.09,
+                child: IconButton(
+                    icon: Center(child: Icon(Icons.add,size: 17,)),
+                    enableFeedback: true,
+                    onPressed: widget.onClick2
+                ),
               ),
             )
-          // CircularButton(
-          //     height: 50,
-          //     width: 50,
-          //     icon: Icon(Icons.menu),
-          //     color: Colors.yellow,
-          //     onPressed: widget.onClick3
-          // ),
+
         ),
         Transform.translate(
-          offset: Offset.fromDirection(getRadianFromDegree(180),widget.distance),
+          offset: Offset.fromDirection(getRadianFromDegree(145), 60//widget.distance
+          ),
           child:
           Transform(
-            transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue)),
+            transform: Matrix4.rotationZ(getRadianFromDegree(widget.rotationValue.value))..scale(widget.degOneTranslationAnimation.value),
+            alignment: Alignment.center,
             child: Container(
-              decoration: BoxDecoration(color: Colors.green, shape: BoxShape.circle),
-              width: 60,
-              height: 60,
-              child: IconButton(icon: Icon(Icons.menu),
-                  enableFeedback: true, onPressed: widget.onClick2),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xffBDBDBD),
+                      blurRadius: 2,
+                      spreadRadius: 1,
+                      offset: Offset(2, -3),
+                    )
+                  ]
+              ),
+              width: size.width*0.09,
+              height: size.width*0.09,
+              child: IconButton(
+                  icon: Icon(Icons.keyboard,size: 17,),
+                  enableFeedback: true,
+                  onPressed: widget.onClick2
+              ),
             ),
           )
-          // CircularButton(
-          //     height: 50,
-          //     width: 50,
-          //     icon: Icon(Icons.menu),
-          //     color: Colors.green,
-          //     onPressed: widget.onClick2
-          // ),
+
         ),
 
-        // CircularButton(
-        //     height: 60,
-        //     width: 60,
-        //     icon: Icon(Icons.menu),
-        //     color: Colors.red,
-        //     onPressed: widget.onClick1
-        // ),
-        Container(
-          decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-          width: 60,
-          height: 60,
-          child: IconButton(icon: Icon(Icons.menu), enableFeedback: true,
-              onPressed: widget.onClick1),
+        GestureDetector(
+          onTap: widget.onClick1,
+          child: Container(
+            decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xffBDBDBD),
+                  blurRadius: 2,
+                  spreadRadius: 1,
+                  offset: Offset(0, 3),
+                )
+              ]
+            ),
+            width: size.width*0.15,
+            height: size.height*0.15,
+            child: ImageIcon(
+                AssetImage('assets/T.png'),
+                //enableFeedback: true,
+                //onPressed: widget.onClick1
+            ),
+          ),
         )
 
 

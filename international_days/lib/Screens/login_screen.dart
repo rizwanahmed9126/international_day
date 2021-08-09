@@ -43,94 +43,97 @@ class LoginScreen extends StatelessWidget {
 
             Align(
               alignment: Alignment.bottomCenter,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
 
-                  Row(
-                    children: [
-                      Container(
-                        height:40,
-                        width: 60,
-                        child: TextField(
-                          cursorColor: Colors.black,
-                          onTap: (){},
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(8),
+                    Row(
+                      children: [
+                        Container(
+                          height:40,
+                          width: 60,
+                          child: TextField(
+                            cursorColor: Colors.black,
+                            onTap: (){},
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.all(8),
 
-                            hintText: '+91',
-                              hintStyle: TextStyle(color: Colors.black),
+                              hintText: '+91',
+                                hintStyle: TextStyle(color: Colors.black),
 
-                              focusedBorder: OutlineInputBorder(
-                                //borderRadius: BorderRadius.all(Radius.circular(4)),
-                                borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
-                              ),
-                            border: OutlineInputBorder(
-
-                              borderSide: const BorderSide(color: Color(0xffBDBDBD), width: 1),
-
-                            )
-                          ),
-
-                          autofocus: false,
-
-                        ),
-                      ),
-                      SizedBox(width: 10,),
-                      Container(
-                        height:40,
-                        width: 200,
-                        child: TextField(
-                          cursorColor: Colors.black,
-                          decoration: InputDecoration(
-
-                              focusedBorder: OutlineInputBorder(
-                                //borderRadius: BorderRadius.all(Radius.circular(4)),
-                                borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
-                              ),
+                                focusedBorder: OutlineInputBorder(
+                                  //borderRadius: BorderRadius.all(Radius.circular(4)),
+                                  borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
+                                ),
                               border: OutlineInputBorder(
 
-
-                                borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
+                                borderSide: const BorderSide(color: Color(0xffBDBDBD), width: 1),
 
                               )
+                            ),
+
+                            autofocus: false,
+
                           ),
-
-                          autofocus: false,
-
                         ),
-                      )
-                    ],
-                  ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height:40,
+                          width: 200,
+                          child: TextField(
+                            cursorColor: Colors.black,
+                            decoration: InputDecoration(
+
+                                focusedBorder: OutlineInputBorder(
+                                  //borderRadius: BorderRadius.all(Radius.circular(4)),
+                                  borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
+                                ),
+                                border: OutlineInputBorder(
 
 
-                  SizedBox(height: 20,),
+                                  borderSide: BorderSide(width: 1,color: Color(0xffBDBDBD)),
 
-                  Container(
-                    height: 45,
-                    width: 275,
-                    decoration: BoxDecoration(
-                        color: Color(0xff686868),
-                        borderRadius: BorderRadius.circular(5),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Color(0xffE0E0E0),
-                              blurRadius: 12,
-                              spreadRadius: 5
-                          )
-                        ]
+                                )
+                            ),
+
+                            autofocus: false,
+
+                          ),
+                        )
+                      ],
                     ),
 
-                    child: TextButton(
-                      onPressed: (){
-                        final controller = ZoomDrawerController();
 
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomDrawer()));
-                      },
-                      child: Text('Next',style: TextStyle(color: Color(0xffFFFFFF)),),
+                    SizedBox(height: 20,),
+
+                    Container(
+                      height: 45,
+                      width: 275,
+                      decoration: BoxDecoration(
+                          color: Color(0xff686868),
+                          borderRadius: BorderRadius.circular(5),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Color(0xffE0E0E0),
+                                blurRadius: 12,
+                                spreadRadius: 5
+                            )
+                          ]
+                      ),
+
+                      child: TextButton(
+                        onPressed: (){
+                          //final controller = ZoomDrawerController();
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomDrawer()));
+                        },
+                        child: Text('Next',style: TextStyle(color: Color(0xffFFFFFF)),),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],

@@ -33,9 +33,9 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color(0xff7CBAB8), //3
-                    Color(0xff467D83), //2
-                    Color(0xff295D68), //1
+                    Color(0xffBDBDBD), //3
+                    Colors.grey[400], //2
+                    Colors.grey, //1
 
                     //Color(0xff558E92),
                   ])),
@@ -70,7 +70,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     size: 18.0,
                   ),
                   title: Text(
-                    'Home',
+                    'Profile',
                     style: GoogleFonts.notoSans(color: Colors.white),
                   ),
                 ),
@@ -82,7 +82,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     size: 18.0,
                   ),
                   title: Text(
-                    'Portfolios',
+                    'Notifications',
                     style: GoogleFonts.notoSans(color: Colors.white),
                   ),
                 ),
@@ -106,7 +106,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     size: 18.0,
                   ),
                   title: Text(
-                    'Accounts',
+                    'Share',
                     style: GoogleFonts.notoSans(color: Colors.white),
                   ),
                 ),
@@ -118,7 +118,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     size: 18.0,
                   ),
                   title: Text(
-                    'Reports',
+                    'Rate',
                     style: GoogleFonts.notoSans(color: Colors.white),
                   ),
                 ),

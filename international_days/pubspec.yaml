@@ -67,6 +67,8 @@ flutter:
     - assets/today_market_img_2.png
     - assets/today_market_img_3.png
     - assets/today_market_img_4.png
+    - assets/T.png
+    - assets/january_4.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
