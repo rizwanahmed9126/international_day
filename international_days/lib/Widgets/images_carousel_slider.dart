@@ -19,16 +19,24 @@ class _ImageCarouselSliderState extends State<ImageCarouselSlider> {
   Widget build(BuildContext context) {
     return
       Container(
+        height: 200,
+        width: MediaQuery.of(context).size.width,
         child:
         Column(
           children: [
             CarouselSlider(
               options: CarouselOptions(
-                  enlargeCenterPage: false,
+                height: 178,
+
+
+                  enlargeCenterPage: true,
                   autoPlay: true,
-                  aspectRatio: 2,//16 / 9,
+                  aspectRatio: 2,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: true,
+                  disableCenter: false,
+                  //viewportFraction: 0.5,
+
                   autoPlayAnimationDuration: Duration(milliseconds: 800),
                   onPageChanged: (index, reason) {
                     setState(() {

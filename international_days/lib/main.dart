@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:international_todays/Screens/drawer_dashboard.dart';
+import 'package:international_todays/Screens/login_screen.dart';
 import 'package:international_todays/Screens/splash_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

@@ -46,7 +46,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
               children: [
                 CircleAvatar(
                     radius: 30.0,
-                    child: Icon(Icons.person),
+                    backgroundColor: Colors.white,
+                    child: Icon(Icons.person,color: Colors.black,),
                     //backgroundImage: AssetImage('assets/image_1.png')
                 ),
                 SizedBox(
@@ -55,7 +56,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 Text(
                   'Darshan',
                   style: GoogleFonts.notoSans(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold),
                 ),
@@ -66,60 +67,60 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     Icons.inventory,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 18.0,
                   ),
                   title: Text(
                     'Profile',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     Icons.shopping_bag_outlined,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 18.0,
                   ),
                   title: Text(
                     'Notifications',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     Icons.manage_accounts,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 18.0,
                   ),
                   title: Text(
                     'About',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     Icons.manage_accounts,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 18.0,
                   ),
                   title: Text(
                     'Share',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(
                     Icons.report,
-                    color: Colors.white,
+                    color: Colors.black,
                     size: 18.0,
                   ),
                   title: Text(
                     'Rate',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 ),
                 ListTile(
@@ -128,10 +129,10 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
                   },
                   contentPadding: EdgeInsets.zero,
-                  leading: Icon(Icons.logout,size: 18.0,color: Colors.white,),
+                  leading: Icon(Icons.logout,size: 18.0,color: Colors.black,),
                   title: Text(
                     'Logout',
-                    style: GoogleFonts.notoSans(color: Colors.white),
+                    style: GoogleFonts.notoSans(color: Colors.black),
                   ),
                 )
               ],

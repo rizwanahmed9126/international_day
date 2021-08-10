@@ -30,11 +30,36 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   final controller = ScrollController();
 
   List<Widget> imagesList = [
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png")
+
+
+    Container(
+      child: FittedBox(
+          child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
+          fit: BoxFit.cover
+      ),
+    ),
+    Container(
+      child: FittedBox(
+          child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
+        fit: BoxFit.cover,
+      ),
+    ),
+    // Container(
+    //   child: FittedBox(
+    //     child: Image.asset('assets/Rectangle 2.png'),
+    //     fit: BoxFit.cover,
+    //   ),
+    // ),
+    // Container(
+    //   child: FittedBox(
+    //     child: Image.asset('assets/Rectangle 2.png'),
+    //     fit: BoxFit.cover,
+    //   ),
+    // ),
+
+
+
+
 
   ];
   AnimationController animationController;
@@ -108,6 +133,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
 
 
               AdsContainer(txt: 'ADS',),
+              SizedBox(height: 10,),
 
               HorizontalImagesList(
                 today:  (){

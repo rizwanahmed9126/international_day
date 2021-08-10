@@ -56,7 +56,7 @@ Widget sliderTile(String imagePath,String text){
   return Column(
     children: [
       Container(
-          height: 60,
+          height: 70,
           child: Image.asset(imagePath)
       ),
       Text(text,style: TextStyle(fontSize: 11),)
