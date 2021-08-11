@@ -81,6 +81,8 @@ flutter:
     - assets/holi_list_img_7.png
     - assets/holi_list_img_8.png
     - assets/holi_list_img_9.png
+    - assets/demo.jpg
+    - assets/holi-parties.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

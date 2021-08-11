@@ -19,17 +19,66 @@ class _HoliPageState extends State<HoliPage> {
           Column(
             children: <Widget>[
               Container(
-                height: 200.0,
-                color: Colors.orange,
-                child: Center(
-                  child: Image.asset('assets/holi_background_images.png',fit: BoxFit.fill,)
+                height: 178.0,
+                width: MediaQuery.of(context).size.width,
+                //color: Colors.orange,
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                    child: Image.asset('assets/holi-parties.jpg',)
                 ),
               ),
               Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: Center(
-                    child: Text('Content goes here'),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 45.0,left: 8,right: 8),
+                  child: SingleChildScrollView(
+                    child: Container(
+                      //color: Colors.red,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 10,),
+                          Text('Happy Holi',style: TextStyle(fontWeight: FontWeight.bold),),
+                          SizedBox(height: 7,),
+                          Text("Cereals, Milk, Butter, Cheese, & More"),
+                          SizedBox(height: 7,),
+                          Divider(height: 2,color: Colors.grey[500]),
+                          SizedBox(height: 10,),
+                          Container(
+                            child:
+                            Text("Holi is a popular ancient Indian festival also\n known as the 'Festival of Love' ...more",textAlign: TextAlign.center,style: TextStyle(color: Colors.grey[600],fontSize: 14),),
+
+
+                          ),
+                          GridView.count(
+                            physics: ScrollPhysics(),
+                            primary: true,
+                            //scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+
+                            crossAxisCount: 3,
+                            childAspectRatio: 1,
+                            padding: const EdgeInsets.all(12.0),
+                            mainAxisSpacing: 5.0,
+                            crossAxisSpacing: 5.0,
+
+                            children: [
+                              Image.asset('assets/holi_list_img_1.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_2.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_3.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_4.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_5.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_6.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_7.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_8.png',fit:BoxFit.fill),
+                              Image.asset('assets/holi_list_img_9.png',fit:BoxFit.fill),
+
+
+
+                            ],
+                          ),
+
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               )
@@ -37,14 +86,12 @@ class _HoliPageState extends State<HoliPage> {
           ),
           // Profile image
           Positioned(
-            top: 150.0, // (background container size) - (circle height / 2)
+            top: 125.0, // (background container size) - (circle height / 2)
             child: Container(
               height: 100.0,
               width: 100.0,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.green
-              ),
+
+              child: Image.asset('assets/profile.png',fit: BoxFit.fill,),
             ),
           )
         ],

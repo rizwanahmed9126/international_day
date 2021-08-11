@@ -33,15 +33,28 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
 
 
     Container(
+
+      height: 100,
+      width: 100,
+      color: Colors.red,
       child: FittedBox(
-          child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
-          fit: BoxFit.cover
+
+        alignment: Alignment.center,
+        fit: BoxFit.cover,
+
+        child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
       ),
     ),
     Container(
+
+      height: 100,
+      width: 100,
+      color: Colors.red,
       child: FittedBox(
-          child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
+        alignment: Alignment.center,
         fit: BoxFit.cover,
+
+        child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
       ),
     ),
     // Container(
