@@ -36,7 +36,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
 
       height: 100,
       width: 100,
-      color: Colors.red,
+      //color: Colors.red,
       child: FittedBox(
 
         alignment: Alignment.center,
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
 
       height: 100,
       width: 100,
-      color: Colors.red,
+      //color: Colors.red,
       child: FittedBox(
         alignment: Alignment.center,
         fit: BoxFit.cover,
@@ -57,21 +57,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
         child: Image.asset('assets/Rectangle 2.png',fit: BoxFit.cover,),
       ),
     ),
-    // Container(
-    //   child: FittedBox(
-    //     child: Image.asset('assets/Rectangle 2.png'),
-    //     fit: BoxFit.cover,
-    //   ),
-    // ),
-    // Container(
-    //   child: FittedBox(
-    //     child: Image.asset('assets/Rectangle 2.png'),
-    //     fit: BoxFit.cover,
-    //   ),
-    // ),
-
-
-
 
 
   ];
@@ -84,7 +69,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
     animationController=AnimationController(vsync: this,duration: Duration(milliseconds: 250));
     degOneTranslationAnimation=Tween(begin: 0.0,end: 1.0).animate(animationController);
     rotationAnimation=Tween(begin: 0.0,end: 180.0).animate(CurvedAnimation(parent: animationController, curve: Curves.easeOut));
-    print('roation animation--${rotationAnimation}');
     super.initState();
 
     animationController.addListener(() {
@@ -117,7 +101,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           }
           else{
             animationController.forward();
-            print('this is forword');
           }
         },
         onClick3: (){},
@@ -186,90 +169,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
               DaysPanel(
                 todayTxt: 'January',
               ),
-
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 18.0,right: 8),
-              //   child: RowText(
-              //     firstTxt: 'TODAY NEWS',
-              //     secondTxt: 'More',
-              //     secondTxtStyle: TextStyle(color: Colors.blue),
-              //     firstTxtStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
-              //   ),
-              // ),
-              //
-              //
-              // Container(
-              //   //height: 350,
-              //   child: GridView.count(
-              //     physics: NeverScrollableScrollPhysics(),
-              //     shrinkWrap: true,
-              //
-              //     crossAxisCount: 2,
-              //     childAspectRatio: 1,
-              //     padding: const EdgeInsets.only(left: 12.0,right: 12,top: 12),
-              //     mainAxisSpacing: 10.0,
-              //     crossAxisSpacing: 10.0,
-              //
-              //     children: [
-              //       Image.asset('assets/today_news_img_1.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_news_img_2.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_news_img_3.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_news_img_4.png',fit:BoxFit.fill),
-              //
-              //     ],
-              //   ),
-              // ),
-              //
-              //
-              //
-              //
-              // Column(
-              //   children: [
-              //     Padding(
-              //       padding: const EdgeInsets.all(8),
-              //       child: RowText(
-              //         firstTxt: 'TODAY MARKET',
-              //         secondTxt: 'More',
-              //         secondTxtStyle: TextStyle(color: Colors.blue),
-              //         firstTxtStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
-              //       ),
-              //     ),
-              //     Container(
-              //       child:
-              //           Text("Holi is a popular ancient Indian festival also\n known as the 'Festival of Love' ...",textAlign: TextAlign.center,style: TextStyle(color: Colors.grey[600],fontSize: 16),),
-              //
-              //
-              //     )
-              //   ],
-              // ),
-              // Container(
-              //   //height: 350,
-              //   child: GridView.count(
-              //     physics: NeverScrollableScrollPhysics(),
-              //     shrinkWrap: true,
-              //
-              //     crossAxisCount: 2,
-              //     childAspectRatio: 1,
-              //     padding: const EdgeInsets.all(12.0),
-              //     mainAxisSpacing: 10.0,
-              //     crossAxisSpacing: 10.0,
-              //
-              //     children: [
-              //       Image.asset('assets/today_market_img_1.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_market_img_2.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_market_img_3.png',fit:BoxFit.fill),
-              //       Image.asset('assets/today_market_img_4.png',fit:BoxFit.fill),
-              //
-              //
-              //
-              //     ],
-              //   ),
-              // )
-              //
-              //
-
-
-
             ],
           ),
         ),
