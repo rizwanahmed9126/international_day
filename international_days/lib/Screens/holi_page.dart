@@ -71,8 +71,6 @@ class _HoliPageState extends State<HoliPage> {
                               Image.asset('assets/holi_list_img_8.png',fit:BoxFit.fill),
                               Image.asset('assets/holi_list_img_9.png',fit:BoxFit.fill),
 
-
-
                             ],
                           ),
 
