@@ -20,15 +20,6 @@ class _TodayState extends State<Today> {
 
   final controller = ScrollController();
 
-  List<Widget> imagesList = [
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png"),
-    Image.asset("assets/Rectangle 2.png")
-
-  ];
-  //final controller1 = ZoomDrawerController();
 
 
   @override
@@ -130,8 +121,6 @@ class _TodayState extends State<Today> {
                   ],
                 ),
               )
-
-
 
 
 

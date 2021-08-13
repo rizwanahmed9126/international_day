@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:international_todays/Screens/holi_page.dart';
 
 class DaysPanel extends StatelessWidget {
   final String todayTxt;
@@ -40,7 +41,12 @@ class DaysPanel extends StatelessWidget {
 
             ),
 
-            customListTile('assets/january_1.png','National Bloody Mary Day','January-01','Food'),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>HoliPage()));
+              },
+                child: customListTile('assets/january_1.png','National Bloody Mary Day','January-01','Food')
+            ),
 
             customListTile('assets/january_2.png','National Hangover Day','January-01','Food'),
 

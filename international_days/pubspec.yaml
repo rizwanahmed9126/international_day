@@ -31,6 +31,10 @@ dependencies:
   carousel_slider: ^4.0.0
   flutter_zoom_drawer: ^2.1.0
   google_fonts: ^2.1.0
+  #image_editor_pro: ^1.1.8
+  image_picker: ^0.6.3+1
+  image_gallery_saver: ^1.2.2
+  permission_handler: ^4.2.0+hotfix.3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +73,21 @@ flutter:
     - assets/today_market_img_4.png
     - assets/T.png
     - assets/january_4.png
+    - assets/Vector.png
+    - assets/holi_background_images.png
+    - assets/profile.png
+    - assets/holi_list_img_1.png
+    - assets/holi_list_img_2.png
+    - assets/holi_list_img_3.png
+    - assets/holi_list_img_4.png
+    - assets/holi_list_img_5.png
+    - assets/holi_list_img_6.png
+    - assets/holi_list_img_7.png
+    - assets/holi_list_img_8.png
+    - assets/holi_list_img_9.png
+    - assets/demo.jpg
+    - assets/holi-parties.jpg
+    - assets/logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
