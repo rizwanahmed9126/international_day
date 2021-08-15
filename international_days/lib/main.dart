@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       
-      home: StatefulDragArea(),
+      home: MainScreen(image: 'assets/holi_img_1.jpg',),
     );
   }
 }

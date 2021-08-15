@@ -57,7 +57,7 @@ Widget icon(){
   return ImageIcon(
     AssetImage('assets/logo.png'),
     size: 70,
-    color: Colors.white,
+    //color: Colors.white,
   );
 }
 
@@ -82,8 +82,7 @@ class _DragState extends State<Drag> {
 
   void updateScale(double zoom) => setState(() => scale = prevScale * zoom);
   void commitScale() => setState(() => prevScale = scale);
-  void updatePosition(Offset newPosition) =>
-      setState(() => position = newPosition);
+  void updatePosition(Offset newPosition) => setState(() => position = newPosition);
 
 
   @override
@@ -99,33 +98,79 @@ class _DragState extends State<Drag> {
             child: Image.asset('assets/holi-parties.jpg',fit: BoxFit.fill,),
           ),
 
-        GestureDetector(
-          onScaleUpdate: (details) => updateScale(details.scale),
-          onScaleEnd: (_) => commitScale(),
-          child: Stack(
-            children: [
-              Positioned.fill(
-                  child: Container(color: Colors.amber.withOpacity(.4))),
-              Positioned(
-                left: position.dx,
-                top: position.dy,
-                child: Draggable(
-                  maxSimultaneousDrags: 1,
-                  feedback:icon(),
-                  childWhenDragging: Opacity(
-                    opacity: .3,
-                    child: icon(),
-                  ),
-                  onDragEnd: (details) => updatePosition(details.offset),
-                  child: Transform.scale(
-                    scale: scale,
-                    child: icon(),
+          Container(
+            height: 370,
+            width: 300,
+
+            color: Colors.red,
+            child:   GestureDetector(
+                  onScaleUpdate: (details) => updateScale(details.scale),
+                  onScaleEnd: (_) => commitScale(),
+                  child: Stack(
+                    children: [
+                      // Positioned.fill(
+                      //     child: Container(color: Colors.amber.withOpacity(.4))
+                      // ),
+                      Positioned(
+                        left: position.dx,
+                        top: position.dy,
+                        child: Draggable(
+                          maxSimultaneousDrags: 1,
+                          feedback:icon(),
+                          childWhenDragging: Opacity(
+                            opacity: .3,
+                            child: icon(),
+                          ),
+                          onDragEnd: (details) => updatePosition(details.offset),
+                          child: Transform.scale(
+                            scale: scale,
+                            child: icon(),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-            ],
           ),
-        ),
+
+        // Positioned(
+        //   top: 15,
+        //   left: 45,
+        //   child: Container(
+        //     height: 370,
+        //     width: 300,
+        //     color: Colors.red,
+        //     //child:
+        //     // GestureDetector(
+        //     //   onScaleUpdate: (details) => updateScale(details.scale),
+        //     //   onScaleEnd: (_) => commitScale(),
+        //     //   child: Stack(
+        //     //     children: [
+        //     //       // Positioned.fill(
+        //     //       //     child: Container(color: Colors.amber.withOpacity(.4))
+        //     //       // ),
+        //     //       Positioned(
+        //     //         left: position.dx,
+        //     //         top: position.dy,
+        //     //         child: Draggable(
+        //     //           maxSimultaneousDrags: 1,
+        //     //           feedback:icon(),
+        //     //           childWhenDragging: Opacity(
+        //     //             opacity: .3,
+        //     //             child: icon(),
+        //     //           ),
+        //     //           onDragEnd: (details) => updatePosition(details.offset),
+        //     //           child: Transform.scale(
+        //     //             scale: scale,
+        //     //             child: icon(),
+        //     //           ),
+        //     //         ),
+        //     //       ),
+        //     //     ],
+        //     //   ),
+        //     // ),
+        //   ),
+        // ),
 
           Padding(
             padding: const EdgeInsets.only(top: 450),
@@ -383,3 +428,6 @@ Widget _holiAppBar(context){
 
   );
 }
+
+
+

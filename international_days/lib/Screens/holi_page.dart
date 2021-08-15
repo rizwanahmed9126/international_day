@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:international_todays/mainScreens/mainScreen1.dart';
 
 class HoliPage extends StatefulWidget {
   const HoliPage({Key key}) : super(key: key);
@@ -61,7 +62,12 @@ class _HoliPageState extends State<HoliPage> {
                             crossAxisSpacing: 5.0,
 
                             children: [
-                              Image.asset('assets/holi_list_img_1.png',fit:BoxFit.fill),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen(image: 'assets/holi_1.jpg',)));
+                                },
+                                  child: Image.asset('assets/holi_list_img_1.png',fit:BoxFit.fill)
+                              ),
                               Image.asset('assets/holi_list_img_2.png',fit:BoxFit.fill),
                               Image.asset('assets/holi_list_img_3.png',fit:BoxFit.fill),
                               Image.asset('assets/holi_list_img_4.png',fit:BoxFit.fill),
