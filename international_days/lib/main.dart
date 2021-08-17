@@ -5,6 +5,7 @@ import 'package:international_todays/Screens/login_screen.dart';
 import 'package:international_todays/Screens/splash_screen.dart';
 import 'package:international_todays/mainScreens/MainScreen.dart';
 import 'package:international_todays/mainScreens/mainScreen1.dart';
+import 'package:international_todays/mainScreens/trying.dart';
 
 void main() {
   runApp(MyApp());
